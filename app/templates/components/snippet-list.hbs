@@ -2,6 +2,6 @@
 
 <ul>
     {{#each this.snippets as |snippet|}}
-        <li>{{snippet}}</li>
+        <li {{action "logSnippet" snippet}}>{{snippet}}</li>
     {{/each}}
 </ul>
