@@ -11,6 +11,9 @@
   <option value="twilight">twilight</option>
   <option value="3024-day">3024-day</option>
 </select>
+{{#each snippets as |snippet|}}
+  <li>{{snippet}}</li>
+{{/each}}
 
-{{ivy-codemirror value=this.model.code valueUpdated=(action (mut this.model.code)) options=(hash theme=this.selectedTheme lineNumbers=true mode=this.selectedOption)}}
+{{!-- {{ivy-codemirror value=this.model.code valueUpdated=(action (mut this.model.code)) options=(hash theme=this.selectedTheme lineNumbers=true mode=this.selectedOption)}} --}}
 <button {{action "logCode"}}>Submit</button>

@@ -4,7 +4,9 @@ export default function() {
     type: 'snippets',
     id: '1',
     attributes: {
-      code: "sdf"
+      code: `func main() error {
+  return "hello world"
+}`
     }
   }]
 
