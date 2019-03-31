@@ -6,7 +6,8 @@ export default function() {
     attributes: {
       code: `func main() error {
   return "hello world"
-}`
+}`,
+      language: 'go',
     }
   }]
 

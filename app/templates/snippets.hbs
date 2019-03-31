@@ -1,4 +1,4 @@
-<h1>snippets</h1>
+<h1>snippets route</h1>
 
 
 {{!-- <select onchange={{action "setSelection" value="target.value"}}>
@@ -14,8 +14,7 @@
   <option value="3024-day">3024-day</option>
 </select> --}}
 {{#each this.model as |snippet|}}
-  {{ivy-codemirror value=snippet.code options=(hash lineNumbers=true mode="go") }}
-  <button {{action "saveCode"}}>submit</button>
+  <Snippet @snippet={{snippet}} />
 {{/each}}
 
 {{!-- {{ivy-codemirror value=this.model.code valueUpdated=(action (mut this.model.code)) options=(hash theme=this.selectedTheme lineNumbers=true mode=this.selectedOption)}} --}}

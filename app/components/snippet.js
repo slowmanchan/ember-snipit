@@ -3,7 +3,6 @@ import Component from '@ember/component';
 export default Component.extend({
     selectedOption: null,
     selectedTheme: 'default',
-    myCode: 'hello',
 
     actions: {
         setTheme: function(theme) {
@@ -13,10 +12,7 @@ export default Component.extend({
             this.set('selectedOption', selected)
         },
         logSnippet(snippet) {
-            alert(snippet);
-        },
-        logCode() {
-            alert(this.model.code)
+            alert("snippet");
         },
     }
 });

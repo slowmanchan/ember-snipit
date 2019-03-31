@@ -1,8 +1,8 @@
 
 <select onchange={{action "setSelection" value="target.value"}}>
   <option disabled selected>Language</option>
-  <option value="javascript">javascript</option>
-  <option value="go">go</option>
+  <option value="javascript" selected={{equals this.snippet.language "javascript"}}>javascript</option>
+  <option value="go" selected={{equals this.snippet.language "go"}}>go</option>
 </select>
 
 <select onchange={{action "setTheme" value="target.value"}}>
@@ -11,9 +11,6 @@
   <option value="twilight">twilight</option>
   <option value="3024-day">3024-day</option>
 </select>
-{{#each snippets as |snippet|}}
-  <li>{{snippet}}</li>
-{{/each}}
 
-{{!-- {{ivy-codemirror value=this.model.code valueUpdated=(action (mut this.model.code)) options=(hash theme=this.selectedTheme lineNumbers=true mode=this.selectedOption)}} --}}
+{{ivy-codemirror value=this.snippet.code valueUpdated=(action (mut this.code)) options=(hash theme=this.selectedTheme lineNumbers=true mode=this.snippet.language)}}
 <button {{action "logCode"}}>Submit</button>
